@@ -1,4 +1,4 @@
-#Install cordova + nextjs + framework7
+# Install cordova + nextjs + framework7
 
 Cordova:
 <pre> 
