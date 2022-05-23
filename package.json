@@ -7,12 +7,13 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "build-www": "next build && next export -o www",
+    "build:www": "next build && next export -o www",
     "export": "next export",
     "start": "next start",
     "lint": "next lint",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "android": "cordova run android"
+    "android": "cordova run android",
+    "build:cordova": "next-cordova-static"
   },
   "keywords": [
     "ecosystem:cordova"
@@ -28,6 +29,7 @@
     "framework7": "^7.0.3",
     "framework7-react": "^7.0.3",
     "next": "^12.1.6",
+    "next-cordova-static": "^1.0.9",
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
   },
