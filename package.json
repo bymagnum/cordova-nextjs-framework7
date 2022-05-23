@@ -1,8 +1,8 @@
 {
-  "name": "com.cordova.nextjs.framework7",
+  "name": "cordova-nextjs-framework7",
   "displayName": "HelloCordova",
   "version": "1.0.0",
-  "description": "A sample Apache Cordova application that responds to the deviceready event.",
+  "description": "Cordova + Nextjs + Framework 7",
   "main": "index.js",
   "scripts": {
     "dev": "next dev",
@@ -15,11 +15,24 @@
     "android:start": "cordova run android",
     "build:cordova": "next-cordova-static"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/bymagnum/cordova-nextjs-framework7.git"
+  },
   "keywords": [
-    "ecosystem:cordova"
+    "nextjs",
+    "next",
+    "cordova",
+    "ecosystem:cordova",
+    "framework7",
+    "cordova"
   ],
-  "author": "Apache Cordova Team",
+  "author": "bymagnum",
   "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/bymagnum/cordova-nextjs-framework7/issues"
+  },
+  "homepage": "https://github.com/bymagnum/cordova-nextjs-framework7#readme",
   "cordova": {
     "platforms": [
       "android"
