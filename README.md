@@ -17,7 +17,7 @@ cd cordova-nextjs-framework7
 
 Installation:
 <pre> 
-npm i next react react-dom framework7 framework7-react
+npm i next react react-dom framework7 framework7-react next-cordova-static
 </pre>
 
 Copy:
@@ -26,16 +26,14 @@ Copy:
   "dev": "next dev",
   "build": "next build && next export -o www",
   "start": "next start",
-  "lint": "next lint"
+  "lint": "next lint",
+  "android:start": "cordova run android",
+  "build:cordova": "next-cordova-static"
 }
 </pre>
 
-Build:
+
+Build cordova platform:
 <pre>
-npm run build-www
+npm run android:start
 </pre>
-
-
-Rename "/_next/" to "/next/" for js script & css style files
-
-Build cordova platform
