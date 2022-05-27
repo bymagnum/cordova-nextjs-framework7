@@ -8,6 +8,9 @@ import { useRouter } from 'next/router';
 
 
 const routes = [{
+    path: '/abc/p.html',
+    asyncComponent: () => import('../pages/abc/p.js'),
+}, {
     path: '/',
     asyncComponent: () => import('../pages/index.js'),
 }];

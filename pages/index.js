@@ -16,9 +16,11 @@ function IndexPage() {
                 <Link>Right Link</Link>
             </NavRight>
         </Navbar>
-        <Page>
+        <Page
+            name="home"
+        >
             <Block>
-                <p>Here comes main view page text</p>
+                <p>Here comes main view <Link href="/abc/p.html">page</Link> text</p>
             </Block>
         </Page>
     </>;
