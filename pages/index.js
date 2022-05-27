@@ -20,7 +20,7 @@ function IndexPage() {
             name="home"
         >
             <Block>
-                <p>Here comes main view <Link href="/abc/p.html">page</Link> text</p>
+                <p>Here comes <Link href="/dr/s/asr.html">main</Link> view <Link href="/abc/p.html">page</Link> text</p>
             </Block>
         </Page>
     </>;
