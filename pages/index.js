@@ -20,7 +20,10 @@ function IndexPage() {
             name="home"
         >
             <Block>
-                <p>Here comes <Link href="/dr/s/asr.html">main</Link> view <Link href="/abc/p.html">page</Link> text</p>
+                <p>Here comes main view page text</p>
+                <p>/dr/s/asr.html: <Link href="/dr/s/asr.html">click</Link></p>
+                <p>/abc/p.html: <Link href="/abc/p.html">click</Link></p>
+                <p>/about.html: <Link href="/about.html">click</Link></p>
             </Block>
         </Page>
     </>;

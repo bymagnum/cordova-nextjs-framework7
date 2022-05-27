@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Page, Navbar, NavRight, NavLeft, NavTitle, List, ListItem, BlockFooter } from 'framework7-react';
-import Meta from '../../../components/Meta';
-import Locale from '../../../components/Locale';
+import Meta from '../components/Meta';
+import Locale from '../components/Locale';
 
 
 export default () => {
@@ -42,7 +42,7 @@ export default () => {
         <Meta title={lng.title} description={lng.description} />
         <Navbar>
             <NavLeft backLink="Back"></NavLeft>
-            <NavTitle>/dr/s/asr.js</NavTitle>
+            <NavTitle>/about.js</NavTitle>
             <NavRight></NavRight>
         </Navbar>
         <Page ptr ptrMousewheel={true} onPtrRefresh={loadMore}>

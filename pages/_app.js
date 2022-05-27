@@ -8,9 +8,25 @@ import { useRouter } from 'next/router';
 
 
 const routes = [{
-    path: '/dr/s/asr.html',
-    asyncComponent: () => import('../pages/dr/s/asr.js'),
+    path: '/about.html',
+    async({ resolve }) {
+        const reactComponent = () => import('../pages/about.js');
+        reactComponent().then((rc) => {
+            console.log(rc);
+            resolve({ component: rc.default })
+        });
+    } ,
+    //asyncComponent: () => import('../pages/dr/s/asr.js'),
 },{
+    path: '/dr/s/asr.html',
+    async({ resolve }) {
+        const reactComponent = () => import('../pages/dr/s/asr.js');
+        reactComponent().then((rc) => {
+            resolve({ component: rc.default })
+        });
+    } ,
+    //asyncComponent: () => import('../pages/dr/s/asr.js'),
+}, {
     path: '/abc/p.html',
     asyncComponent: () => import('../pages/abc/p.js'),
 }, {
