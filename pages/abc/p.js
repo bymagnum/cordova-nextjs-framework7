@@ -1,11 +1,8 @@
 import React, { useState, useRef } from 'react';
 import { Page, Navbar, NavRight, NavLeft, NavTitle, BlockTitle, List, ListItem, Link } from 'framework7-react';
-import Meta from '../../components/Meta';
-import Locale from '../../components/Locale';
 
 
 export default () => {
-    const lng = Locale();
     const allowInfinite = useRef(true);
     const [items, setItems] = useState([
         1,
@@ -52,7 +49,6 @@ export default () => {
     };
 
     return <>
-        <Meta title={lng.title} description={lng.description} />
         <Navbar>
             <NavLeft backLink="Back"></NavLeft>
             <NavTitle>/abc/p.js</NavTitle>

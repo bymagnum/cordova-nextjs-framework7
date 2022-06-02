@@ -4,41 +4,39 @@ Framework7.use(Framework7React);
 import '../node_modules/framework7/framework7-bundle.min.css';
 import PanelLeft from '/components/PanelLeft.js';
 import { useRouter } from 'next/router';
+import Head from 'next/head';
 
+
+import aboutPage from '../pages/about.js';
+import indexPage from '../pages/index.js';
+import pPage from '../pages/abc/p.js';
+import asrPage from '../pages/dr/s/asr.js';
 
 
 const routes = [{
     path: '/about.html',
-    async({ resolve }) {
-        const reactComponent = () => import('../pages/about.js');
-        reactComponent().then((rc) => {
-            console.log(rc);
-            resolve({ component: rc.default })
-        });
-    } ,
-    //asyncComponent: () => import('../pages/dr/s/asr.js'),
-},{
+    component: aboutPage,
+}, {
     path: '/dr/s/asr.html',
-    async({ resolve }) {
-        const reactComponent = () => import('../pages/dr/s/asr.js');
-        reactComponent().then((rc) => {
-            resolve({ component: rc.default })
-        });
-    } ,
-    //asyncComponent: () => import('../pages/dr/s/asr.js'),
+    component: asrPage,
 }, {
     path: '/abc/p.html',
-    asyncComponent: () => import('../pages/abc/p.js'),
+    component: pPage,
 }, {
     path: '/',
-    asyncComponent: () => import('../pages/index.js'),
+    component: indexPage,
 }];
-
 
 
 function CordovaApp({ Component, pageProps }) {
     const router = useRouter();
     return <>
+        <Head>
+            <title>My page title</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover" />
+            <meta name="format-detection" content="telephone=no" />
+            <script src="cordova.js"></script>
+        </Head>
         <App theme="ios" url={(process.env.NEXT_PUBLIC_HOST + router.asPath)} routes={routes}>
             <PanelLeft />
             <View url="/" className="view-main view-init">

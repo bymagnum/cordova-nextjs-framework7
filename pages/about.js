@@ -1,11 +1,8 @@
 import React, { useState } from 'react';
 import { Page, Navbar, NavRight, NavLeft, NavTitle, List, ListItem, BlockFooter } from 'framework7-react';
-import Meta from '../components/Meta';
-import Locale from '../components/Locale';
 
 
 export default () => {
-    const lng = Locale();
     const songs = ['Yellow Submarine', "Don't Stop Me Now", 'Billie Jean', 'Californication'];
     const authors = ['Beatles', 'Queen', 'Michael Jackson', 'Red Hot Chili Peppers'];
     const [items, setItems] = useState([{
@@ -35,11 +32,10 @@ export default () => {
             cover: picURL,
         });
         setItems([...items]);
-        done();
+            done();
         }, 1000);
     };
     return <>
-        <Meta title={lng.title} description={lng.description} />
         <Navbar>
             <NavLeft backLink="Back"></NavLeft>
             <NavTitle>/about.js</NavTitle>
@@ -48,9 +44,9 @@ export default () => {
         <Page ptr ptrMousewheel={true} onPtrRefresh={loadMore}>
             <List mediaList>
                 {items.map((item, index) => (
-                <ListItem key={index} title={item.title} subtitle={item.author}>
-                    <img slot="media" src={item.cover} width="44" />
-                </ListItem>
+                    <ListItem key={index} title={item.title} subtitle={item.author}>
+                        <img slot="media" src={item.cover} width="44" />
+                    </ListItem>
                 ))}
                 <BlockFooter>
                 <p>
